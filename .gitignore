@@ -9,6 +9,4 @@ env/
 *.pth
 *.ckpt
 .DS_Store
-policy_dataset_v3/train/
-policy_dataset_v3/val/
-policy_dataset_v3/test/
+
