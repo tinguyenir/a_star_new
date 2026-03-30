@@ -1,0 +1,51 @@
+{
+  "args": {
+    "raw_dir": "/home/tin/raw_dataset_astar",
+    "output": "/home/tin/astar/policy_dataset_v/policy_dataset_v3",
+    "crop_margin": 128,
+    "out_size": 192,
+    "obstacle_threshold": 99.0,
+    "unknown_is_obstacle": true,
+    "workers": 6,
+    "max_in_flight": 8,
+    "start_idx": 0,
+    "end_idx": 1000,
+    "seed": 42,
+    "train_ratio": 0.8,
+    "val_ratio": 0.1,
+    "recovery_radius": 2,
+    "recovery_per_state": 1,
+    "near_goal_skip": 2,
+    "turning_penalty": 0.2,
+    "cost_penalty_gain": 50.0
+  },
+  "num_raw_files": 984,
+  "splits": {
+    "train": 787,
+    "val": 98,
+    "test": 99
+  },
+  "channels": [
+    "obstacle",
+    "cost_norm",
+    "unknown",
+    "current",
+    "goal"
+  ],
+  "action_space": {
+    "0": "N",
+    "1": "NE",
+    "2": "E",
+    "3": "SE",
+    "4": "S",
+    "5": "SW",
+    "6": "W",
+    "7": "NW"
+  },
+  "expert_policy": {
+    "type": "cost_aware_astar",
+    "turning_penalty": 0.2,
+    "cost_penalty_gain": 50.0,
+    "unknown_is_obstacle": true
+  }
+}
